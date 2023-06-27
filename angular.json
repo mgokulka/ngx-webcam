@@ -80,9 +80,13 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootsrap.min.js"
+
+            ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootsrap.min.css"
             ],
             "assets": [
               "src/assets",

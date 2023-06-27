@@ -1,0 +1,63 @@
+<div class="container w-50 h-50 bg-warning">
+  <div
+    class="btn btn-outline-primary"
+    #modalOpen
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    Open Box
+  </div>
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog model-fullscreen">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">User Account</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div> -->
+        <div class="modal-body">
+            <div class="container border border-primary shadow p-5 m-5">
+              <app-camera></app-camera>
+            </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button
+            type="button"
+            #close
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="stepper-wrapper">
+          <div class="line"></div>
+          <ul class="stepper">
+            <li *ngFor="let station of stations; let i = index" [ngClass]="{ 'active': i === currentStation, 'completed': i < currentStation, 'next': i === currentStation + 1 }">
+              <div class="dot"></div>
+              <span class="station-name">{{ station }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

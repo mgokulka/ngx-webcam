@@ -1,0 +1,20 @@
+.c1 {
+	animation: c1 .5s ease-in-out both .5s;
+}
+@keyframes c1 {
+	0% {
+		opacity: 0;
+		stroke-dasharray: 0 409;
+	}
+	100% {
+		stroke-dasharray: 30 379;
+		opacity: 1;
+	}
+}
+circle {
+	// stroke-width: 6;
+	stroke-linecap: round;
+	fill: none;
+	// stroke-dasharray: 0 409;
+	// opacity: 0;
+}
