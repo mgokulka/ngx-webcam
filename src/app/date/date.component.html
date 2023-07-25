@@ -1,0 +1,97 @@
+<div class="row d-flex justify-content-between row-cols-7 my-5">
+  <div class="col shadow m-1" *ngFor="let all of all_date">
+    <div class="card h-100">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0 h2">
+          <p>{{ all.output }}</p>
+          <footer class="row d-flex  align-self-end">
+            <div class="col h6 text-primary">
+              {{ all.footer.label | uppercase }}
+            </div>
+            <div class="col h6 text-success">
+              {{ all.footer.data_type | uppercase }}
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row col-row-4 my-5 border shadow p-2">
+  <div class="col">
+    <form action="" [formGroup]="dateReduceForm">
+      <input type="date" class="form-control" formControlName="date_to_reduce" name="" id="">
+      <button
+      class="btn btn-outline-primary mt-2"
+      
+      (click)="btn(2)"
+    >
+      Reduce 30 days
+    </button>
+    </form>
+  </div>
+  <div class="col">
+    <input type="date" class="form-control" [(ngModel)]="date_chosen" />
+    <button
+      class="btn btn-outline-primary mt-2"
+      [disabled]="date_chosen == undefined"
+      (click)="chosenDate()"
+    >
+      User chosen date
+    </button>
+  </div>
+  <div class="col">
+    <input type="date" class="form-control" [(ngModel)]="date_today" />
+    <label
+      class="text-primary border border-primary rounded p-1 mt-2"
+      title="Not a button"
+      >Today's Default Date</label
+    >
+  </div>
+  <div class="col row text-center">
+    <div class="col-6">
+      <input type="date" class="w-100 form-control" [(ngModel)]="startDate" />
+    </div>
+    <div class="col-6">
+      <input type="date" class="w-100 form-control" [(ngModel)]="endDate" />
+    </div>
+    <div class="col row">
+      <div class="col">
+        <button class="btn btn-outline-primary mt-2" (click)="btn(1)">Difference</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

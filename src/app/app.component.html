@@ -1,7 +1,111 @@
-<charts></charts>
+<!-- <charts></charts> -->
 <!-- <only-camera></only-camera> -->
- <!-- <lender-dgtloan></lender-dgtloan>
+<!-- <lender-dgtloan></lender-dgtloan>
  <div class="container">
-  <div class="h1 text-danger">MRG</div>
- </div>
- <app-vertical-stepper [status]="'reject'"></app-vertical-stepper> -->
+</div>
+<app-vertical-stepper [status]="'reject'"></app-vertical-stepper> -->
+<!-- <my-form></my-form>
+<div class="card text-center"></div> -->
+<!-- Nav tabs -->
+ <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link "
+      id="date-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#date"
+      type="button"
+      role="tab"
+      aria-controls="date"
+      aria-selected="true"
+    >
+      Date</button
+    >
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link active"
+      id="home-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#home"
+      type="button"
+      role="tab"
+      aria-controls="home"
+      aria-selected="true"
+    >
+      Home</button
+    >
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="profile-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#profile"
+      type="button"
+      role="tab"
+      aria-controls="profile"
+      aria-selected="false"
+    >
+      Stand Alone Component
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="messages-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#messages"
+      type="button"
+      role="tab"
+      aria-controls="messages"
+      aria-selected="false"
+    >
+      BS5-Placeholder Example
+    </button>
+  </li>
+</ul>
+
+
+<div class="tab-content">
+  <div
+    class="tab-pane active"
+    id="date"
+    role="tabpanel"
+    aria-labelledby="date-tab"
+  >
+    <div class="text-center">
+      <div class="d-print-table">
+        <div class="card-title">
+          <h4 class="card-title">All About Date</h4>
+        </div>
+        <div class="card-body">
+          <date></date>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="text-center">
+     <cache-demo></cache-demo>
+    </div>
+  </div>
+  <div
+    class="tab-pane"
+    id="profile"
+    role="tabpanel"
+    aria-labelledby="profile-tab"
+  >
+    <div class="text-center">
+      <stand-alone></stand-alone>
+    </div>
+  </div>
+  <div
+    class="tab-pane"
+    id="messages"
+    role="tabpanel"
+    aria-labelledby="messages-tab"
+  >
+    <bs5-placeholder></bs5-placeholder>
+  </div>
+</div> 

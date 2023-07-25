@@ -1,0 +1,45 @@
+<div class="container mt-5 p-5 bg-light shadow border">
+  <button type="button" class="btn btn-outline-primary col-6">
+    Remove Placeholders
+  </button>
+</div>
+<div class="container">
+  <!-- <ng-container *ngIf="!showNgtemplate"> 
+  </ng-container> -->
+</div>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  id="liveToastBtn"
+  (click)="show()"
+>
+  Show live toast
+</button>
+
+<div class="row justify-content-end align-items-center g-2">
+  <div class="col">
+    <div
+      #myToast
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast fade"
+      data-bs-autohide="true"
+    >
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="..." />
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+          aria-
+          label="Close"
+        ></button>
+      </div>
+      <div class="toast-body">Hello, world! This is a toast message.</div>
+    </div>
+  </div>
+</div>

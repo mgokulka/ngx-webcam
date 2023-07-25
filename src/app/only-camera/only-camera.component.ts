@@ -1,30 +1,29 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 
 @Component({
-  selector: 'only-camera',
-  template:`
+  selector: "only-camera",
+  template: `
     <h1>Camera Only App</h1>
     <video #videoElement autoplay></video>
     <button (click)="capture()" [disabled]="!isCameraReady">Capture</button>
     <canvas hidden #canvasElement></canvas>
   `,
-  styleUrls: ['./only-camera.component.scss']
+  styleUrls: ["./only-camera.component.scss"],
 })
 export class OnlyCameraComponent implements OnInit {
   @ViewChild("videoElement", { static: true })
   videoElement: ElementRef<HTMLVideoElement>;
   @ViewChild("canvasElement", { static: true })
   canvasElement: ElementRef<HTMLCanvasElement>;
-  constructor() { }
+  constructor() {}
   hasCameraPermission: boolean;
   capturedImage: string;
   mediaStream: MediaStream;
   isCameraReady: boolean;
   ngOnInit(): void {
     this.requestCameraPermission();
-
   }
- requestCameraPermission() {
+  requestCameraPermission() {
     const video = this.videoElement.nativeElement;
     console.log(video);
 
@@ -44,8 +43,8 @@ export class OnlyCameraComponent implements OnInit {
         console.error("Error accessing the camera: ", err);
         this.hasCameraPermission = false;
       });
- }
-    capture() {
+  }
+  capture() {
     const video = this.videoElement.nativeElement;
     const canvas = this.canvasElement.nativeElement;
     const context = canvas.getContext("2d");
@@ -64,7 +63,7 @@ export class OnlyCameraComponent implements OnInit {
       if (this.mediaStream) {
         const tracks = this.mediaStream.getTracks();
         tracks.forEach((track) => track.stop());
-      }     
+      }
     }
   }
 }

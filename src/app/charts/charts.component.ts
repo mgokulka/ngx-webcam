@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,inject, OnInit } from '@angular/core';
+import { VarServiceService } from '../services/var-service.service';
 
 @Component({
   selector: 'charts',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ChartsComponent implements OnInit {
   title = 'Browser market shares at a specific website, 2014';
   type = 'PieChart';
-  data = [
+  chartData = [
      ['Firefox', 45.0],
      ['IE', 26.8],
      ['Chrome', 12.8],
@@ -21,10 +22,14 @@ export class ChartsComponent implements OnInit {
   };
   width = 550;
   height = 400;   
-  constructor() { }
+  name:any=inject(VarServiceService)
+  constructor(
+   
+  ) {
+   }
 
   ngOnInit(): void {
- 
+ console.log(this.name)
   }
 
 }
