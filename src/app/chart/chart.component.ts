@@ -52,6 +52,17 @@ export class ChartComponent implements AfterViewInit {
       options: {
         cutout: 95,
         maintainAspectRatio: false,
+        tooltip: {
+          callbacks: {
+            label: (context) => {
+              const dataset = context.dataset;
+              const total = dataset.data.reduce((previousValue, currentValue) => previousValue + currentValue);
+              const currentValue = dataset.data[context.dataIndex];
+              const percentage = ((currentValue / total) * 100).toFixed(2);
+              return `${data.labels[context.dataIndex]}: ${currentValue} (${percentage}%)`;
+            }
+          }
+        }
       },
     });
   }
